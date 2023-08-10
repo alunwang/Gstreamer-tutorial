@@ -29,5 +29,11 @@ class Player(object):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("You missed the required parameter.")
+        print(f"Usage:\r\n{__file__} uri")
+        sys.exit(1)
+
     uri = sys.argv[1]
+    print(f"You are playing: {uri}.")
     p = Player(uri)
